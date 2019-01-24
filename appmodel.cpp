@@ -1,12 +1,19 @@
-#include "appmodel.h"
 #include "QDate"
 #include "QDebug"
 #include "QString"
 
-QString AppModel::getUrl()
+#include "appmodel.h"
+
+QString AppModel::getOWMUrl()
 {
-    url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=cebcb30c79bb4211936200546180112&tp=24&num_of_days=5&format=json&lang=ru&q=" + city;
-    return url;
+    owmUrl = "http://api.openweathermap.org/data/2.5/forecast?mode=json&appid=d9e234701006e52f21bb42a8b2bf1568&lang=ru&units=metric&q=" + city;
+    return owmUrl;
+}
+
+QString AppModel::getWWOUrl()
+{
+    wwoUrl = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=cebcb30c79bb4211936200546180112&tp=24&num_of_days=5&format=json&lang=ru&q=" + city;
+    return wwoUrl;
 }
 
 // setters

@@ -17,11 +17,13 @@ class AppModel : public QObject
     Q_PROPERTY(QString wind READ getWind WRITE setWind)
     Q_PROPERTY(QString feels_like READ getFeels_Like WRITE setFeels_Like)
     Q_PROPERTY(QString city READ getCity WRITE setCity)
-    Q_PROPERTY(QString url READ getUrl)
+    Q_PROPERTY(QString wwoUrl READ getWWOUrl)
+    Q_PROPERTY(QString owmUrl READ getOWMUrl)
 public:
     AppModel() = default;
 
-    QString getUrl();
+    QString getOWMUrl();
+    QString getWWOUrl();
 
     // setters
     void setPressure(const QString &value);
@@ -59,7 +61,8 @@ private:
     QString wind;
     QString feels_like;
     QString city;
-    QString url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=cebcb30c79bb4211936200546180112&tp=24&num_of_days=5&format=json&lang=ru";
+    QString owmUrl;
+    QString wwoUrl;
 };
 
 #endif // APPMODEL_H

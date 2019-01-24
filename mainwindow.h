@@ -10,6 +10,9 @@
 
 #include "appmodel.h"
 #include "favourites.h"
+#include "wworequest.h"
+#include "owmrequest.h"
+#include "settings.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,25 +27,32 @@ public:
     ~MainWindow();
     void setInfo();
     void setDayOfWeek();
-    void makeRequest(QString city);
+    void WRequest(QString city);
+    void ORequest(QString city);
     void adjustLabels();
     void setImages();
 
-    void updateRequest(QString city);
+    void makeRequest(QString city);
 
-public slots:
-    void replyFinished(QNetworkReply* reply);
+    void updateRequest(QString city);
 
 private slots:
     void on_request_btn_clicked();
     void on_repeat_btn_clicked();
 
-    void on_pushButton_clicked();
+    void on_favouriteButton_clicked();
+
+    void on_settingsButton_clicked();
 
 private:
 
+    bool isWWO;
+    bool isOWM;
+    OWMRequest* owmRequest = new OWMRequest();
+    WWORequest* wwoRequest = new WWORequest();
     Favourite *fav_menu;
-    AppModel mod[5];
+    AppModel* mod = new AppModel[5];
+    Settings* settings_menu;
     Ui::MainWindow *ui;
     QNetworkAccessManager* manager = new QNetworkAccessManager(this);
 };

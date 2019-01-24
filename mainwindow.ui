@@ -136,7 +136,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>75</y>
+      <y>120</y>
       <width>59</width>
       <height>16</height>
      </rect>
@@ -195,7 +195,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>140</y>
+      <y>150</y>
       <width>24</width>
       <height>24</height>
      </rect>
@@ -208,7 +208,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>180</y>
+      <y>190</y>
       <width>24</width>
       <height>24</height>
      </rect>
@@ -221,7 +221,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>220</y>
+      <y>230</y>
       <width>24</width>
       <height>24</height>
      </rect>
@@ -234,7 +234,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>143</y>
+      <y>153</y>
       <width>60</width>
       <height>16</height>
      </rect>
@@ -252,7 +252,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>183</y>
+      <y>193</y>
       <width>60</width>
       <height>16</height>
      </rect>
@@ -270,8 +270,8 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>223</y>
-      <width>60</width>
+      <y>233</y>
+      <width>100</width>
       <height>16</height>
      </rect>
     </property>
@@ -539,7 +539,7 @@
    <widget class="QTextEdit" name="day1_desc">
     <property name="geometry">
      <rect>
-      <x>22</x>
+      <x>18</x>
       <y>465</y>
       <width>100</width>
       <height>81</height>
@@ -555,7 +555,7 @@
    <widget class="QTextEdit" name="day3_desc">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>257</x>
       <y>465</y>
       <width>100</width>
       <height>81</height>
@@ -571,7 +571,7 @@
    <widget class="QTextEdit" name="day2_desc">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>137</x>
       <y>465</y>
       <width>100</width>
       <height>81</height>
@@ -587,7 +587,7 @@
    <widget class="QTextEdit" name="day4_desc">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>387</x>
       <y>465</y>
       <width>100</width>
       <height>81</height>
@@ -604,7 +604,7 @@
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>140</y>
+      <y>150</y>
       <width>24</width>
       <height>24</height>
      </rect>
@@ -617,7 +617,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>143</y>
+      <y>153</y>
       <width>110</width>
       <height>20</height>
      </rect>
@@ -635,7 +635,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>183</y>
+      <y>193</y>
       <width>110</width>
       <height>20</height>
      </rect>
@@ -653,7 +653,7 @@
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>180</y>
+      <y>190</y>
       <width>24</width>
       <height>24</height>
      </rect>
@@ -662,13 +662,13 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="favouriteButton">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>100</width>
-      <height>30</height>
+      <x>260</x>
+      <y>4</y>
+      <width>16</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -676,7 +676,44 @@
 </string>
     </property>
     <property name="text">
-     <string>Избранные</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/images/favourite.png</normaloff>:/images/favourite.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="settingsButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>4</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:0</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/images/settings.png</normaloff>:/images/settings.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dateLabel">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>75</y>
+      <width>59</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

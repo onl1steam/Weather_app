@@ -2,6 +2,7 @@
 #define FORM_H
 
 #include <QWidget>
+
 #include "appmodel.h"
 
 namespace Ui {
